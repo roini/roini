@@ -1,1 +1,421 @@
-f
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .PaketebisCont{
+        min-height: 100px;
+        width:1000px;
+        margin:auto;
+        padding-left:0px;
+        padding:10px;
+        box-sizing:border-box;
+        border:solid 1px #000;
+        
+       }
+        .container {
+            box-sizing: border-box;
+            margin:auto;
+            display: grid;
+            grid-template-columns: repeat(3,minmax(0,1fr));
+            gap:15px;
+            margin-right:15px;
+        }
+
+        .item {
+            width: 100%;
+            min-height:300px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            text-align:center;
+            margin: 10px;
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            box-sizing:border-box;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        .item:hover {
+            z-index: 1;
+            transform: scale(1.05);
+        }
+
+        .item img {
+            max-width: 100%;
+            height: auto;
+        }
+        ul{
+            margin-top:0;
+        }
+        
+        ul li{
+            list-style-type: none;
+            margin:0;
+            
+        }
+        li{
+            font-size:11pt;
+            padding-bottom:15px;
+        }
+        .paksia{
+            padding:0;
+        }
+        .paksia-satauri{
+            width:100%;
+            font-size:20pt;
+            background-color: #4a5669 ;
+            color:white;
+        }
+        .siisElementebi{
+            font-size:15pt;
+        }
+        select{
+            width:100%;
+        }
+        button.btn{
+          position:relative;
+        }
+        span{
+            width:100%;
+            font-size:8pt;
+            text-align: center;
+        }
+        button.btn span{
+            position:absolute;
+            top:10%;
+            left:-0.1%;
+            font-size:20pt;
+            text-align:center;
+
+        }
+        .intetechnology{
+                text-align:center;
+                font-size:20pt;
+            border:1px;
+            color:#4a5669;
+            width:955px;
+            margin:auto;
+        }
+        .tvPak{
+            border:1px solid #000;
+            border-radius:10px;
+           font-size:12pt;
+           text-align:center;
+        }
+        .mainSatauri{
+            text-align: center;
+            color:#4a5669
+        }
+        .Maintext{
+            text-align: center;
+            color:#4a5669;
+        }
+        
+    </style>
+</head>
+<body>
+   <div class="PaketebisCont"> <h1 class="mainSatauri">ინტერნეტ პაკეტები</h1>
+    <p class="Maintext">ჩვენთან წინასწარი გადახდაა! შეძენილი დღეების თანხა უკან არ ბრუნდება.</p>
+    <p class="Maintext">პაკეტის ღირებულება მოიცავს 30 კალენდარულ დღეს.მინიმალური გადასახდელი თანხაა 7 ლარი</p>
+</div>
+        <div class="PaketebisCont">
+            <div class="intetechnology">უკაბელო ინტერნეტის ტარიფები</div>
+            <div class="container">
+                <div class="item hide">
+                    <form id="myForm1">
+                        <ul class="paksia">
+                        <input id="dataInput" type="hidden" value="ukabelo"/>
+                        <li id="dataInput1" class="paksia-satauri">მინი</li>
+                        <li class="siisElementebi">20 ლარი</li>
+                        <li>სიჩქარე: 5 მბ/წმ</li>
+                            <li> მინიმალური 1 მბ
+                         <li> დაყოვნება &lt;400 მწმ, ჯიტერი &lt;50 </li> </li>
+                            <li> დაკარგული პაკეტების კოეფიციენტი &lt;10% </li>
+                        <li class="siisElementebi">
+                        
+                            <button id="submit" class="button3">შეკვეთა</button>
+                        </li>
+                        </ul>
+                    </form>
+                </div>
+                <div class="item">
+                    <form id="myForm2">
+                        <ul class="paksia">
+                        <input id="dataInput" type="hidden" value="ukabelo"/>
+                        <li id="dataInput1" class="paksia-satauri">ნორმალი</li>
+                        <li class="siisElementebi">25 ლარი</li>
+                        <li>სიჩქარე: 7 მბ/წმ</li>
+                            <li > მინიმალური 1,5 მბ
+                        <li> დაყოვნება &lt;400 მწმ, ჯიტერი &lt;50 </li> 
+                        <li> დაკარგული პაკეტების კოეფიციენტი &lt;8% </li>
+                        <li class="siisElementebi">
+                           
+                            <button id="submit" class="button3">შეკვეთა</button>
+                        </li>
+                        </ul>
+                    </form>
+                </div>
+                <div class="item">
+                    <form id="myForm3">
+                            <ul class="paksia">
+                            <input id="dataInput" type="hidden" value="ukabelo"/>
+                            <li id="dataInput1" class="paksia-satauri ">ეკონომი</li>
+                            <li class="siisElementebi">30 ლარი</li>
+                            <li>სიჩქარე: 10მბ/წმ</li>
+                                <li> მინიმალური 2 მბ
+                                <li>დაყოვნება &lt;400 მწმ, ჯიტერი &lt;50</li>
+                                <li> დაკარგული პაკეტების კოეფიციენტი &lt;8% </li>
+                            <li class="siisElementebi">
+                               
+                                <button id="submit" class="button3">შეკვეთა</button>
+                            </li>
+                            </ul>
+                    </form>
+                </div>
+                <div class="item">
+                    <form id="myForm4">
+                        <ul class="paksia">
+                        <input id="dataInput" type="hidden" value="ukabelo"/>
+                        <li id="dataInput1" class="paksia-satauri">ექსპრესი</li>
+                        <li class="siisElementebi">40 ლარი</li>
+                        <li>სიჩქარე: 12მბ/წმ</li>
+                            <li > მინიმალური 2,4  მბ
+                            <li>დაყოვნება &lt;400 მწმ, ჯიტერი &lt;50</li>
+                            <li> დაკარგული პაკეტების კოეფიციენტი &lt;8% </li>
+                        <li class="siisElementebi">
+                            
+                            <button id="submit" class="button3">შეკვეთა</button>
+                        </li>
+                        </ul>
+                </form>
+                </div>
+                <div class="item hide">
+                    <form id="myForm5">
+                            <ul class="paksia">
+                            <input id="dataInput" type="hidden" value="ukabelo"/>
+                            <li id="dataInput1" class="paksia-satauri">ვიპ</li>
+                            <li class="siisElementebi">60 ლარი</li>
+                            <li>სიჩქარე: 15მბ/წმ</li>
+                                <li > მინიმალური 3 მბ
+                                <li>დაყოვნება &lt;400 მწმ, ჯიტერი &lt;50</li>
+                                <li> დაკარგული პაკეტების კოეფიციენტი &lt;8% </li> 
+                            <li class="siisElementebi">
+                                
+                                <button id="submit" class="button3">შეკვეთა</button>
+                            </li>
+                            </ul>
+                        </form>
+                </div>
+                
+                    <button id="showMore" class="btn item"><span>მეტი</span><img width="30%" src="more.svg"></button>
+                    <button id="showLess" class="btn hide"><span>ნაკლები</span><img width="30%" src="less.svg"></button>
+                
+            </div>
+        </div>
+        <div class="PaketebisCont">
+            <div class="intetechnology">ოპტიკურ-ბოჭკოვანი ინტერნეტის ტარიფები</div>
+            <div class="container">
+                <div class="item">
+                    <form id="myForm6">
+                        <ul class="paksia">
+                        <input id="dataInput" type="hidden" value="ukabelo"/>
+                        <li id="dataInput1" class="paksia-satauri">მინი</li>
+                        <li class="wira">20 ლარი</li>
+                        <li>სიჩქარე: 20მბ/წმ</li>
+                            <li> მინიმალური 4 მბ</li>
+                        <li>დაყოვნება &lt;400 მწმ, ჯიტერი &lt;50</li>
+                            <li> დაკარგული პაკეტების კოეფიციენტი &lt;3% </li> 
+                        <li class="siisElementebi">
+                        
+                            <li>
+                                <select class="tvPak">
+                                    <option>აირჩიეთ ტელევიზიის პაკეტი</option>
+                                    <option value="tvEko">ეკონომი-10 ლარი</option>
+                                    <option value="tvEcoSet">ეკონომი+სეტანტა-15 ლარი</option>
+                                    <option value="tvBas">საბაზო-12 ლარი</option>
+                                    <option value="tvBasSet">საბაზო+სეტანტა-17 ლარი</option>
+                                    <option value="tvPrem">პრემიუმი-15 ლარი</option>
+                                    <option value="tvPremSet">პრემიუმი+სეტანტა-20 ლარი</option>
+                            </select>
+                            <button id="submit" class="button3">შეკვეთა</button>
+                        </li>
+                        </ul>
+                    </form>
+                </div>
+                <div class="item">
+                    <form id="myForm7">
+                        <ul class="paksia">
+                        <input id="dataInput" type="hidden" value="ukabelo"/>
+                        <li id="dataInput1" class="paksia-satauri">ეკონომი</li>
+                        <li class="siisElementebi">40 ლარი</li>
+                        
+                        <li>სიჩქარე: 40 მბ/წმ</li>
+                            <li style="font-size:9pt;"> მინიმალური 8 მბ</li>
+                        <li>დაყოვნება &lt;400 მწმ, ჯიტერი &lt;50</li>
+                            <li> დაკარგული პაკეტების კოეფიციენტი &lt;3% </li>     
+                        <li class="siisElementebi">
+                            <li>
+                                <select class="tvPak">
+                                    <option>აირჩიეთ ტელევიზიის პაკეტი</option>
+                                    <option value="tvEko">ეკონომი-10 ლარი</option>
+                                    <option value="tvEcoSet">ეკონომი+სეტანტა-15 ლარი</option>
+                                    <option value="tvBas">საბაზო-12 ლარი</option>
+                                    <option value="tvBasSet">საბაზო+სეტანტა-17 ლარი</option>
+                                    <option value="tvPrem">პრემიუმი-15 ლარი</option>
+                                    <option value="tvPremSet">პრემიუმი+სეტანტა-20 ლარი</option>
+                            </select>
+                            </li>
+                            <button id="submit" class="button3">შეკვეთა</button>
+                        </li>
+                        </ul>
+                    </form>
+                </div>
+                <div class="item">
+                    <form id="myForm8">
+                            <ul class="paksia">
+                            <input id="dataInput" type="hidden" value="ukabelo"/>
+                            <li id="dataInput1" class="paksia-satauri ">ექსპრესი</li>
+                            <li class="siisElementebi">60 ლარი</li>
+                            <li class="wira"> 60 ლარი</li>
+<li>სიჩქარე: 50მბ/წმ</li>
+     <li style="font-size:9pt;"> მინიმალური 10 მბ</li>
+<li>დაყოვნება &lt;400 მწმ, ჯიტერი &lt;50</li>
+    <li> დაკარგული პაკეტების კოეფიციენტი &lt;3% </li>     
+                            <li class="siisElementebi">
+                                <li>
+                                    <select class="tvPak">
+                                         <option>აირჩიეთ ტელევიზიის პაკეტი</option>
+                                        <option value="tvEko">ეკონომი-10 ლარი</option>
+                                        <option value="tvEcoSet">ეკონომი+სეტანტა-15 ლარი</option>
+                                        <option value="tvBas">საბაზო-12 ლარი</option>
+                                        <option value="tvBasSet">საბაზო+სეტანტა-17 ლარი</option>
+                                        <option value="tvPrem">პრემიუმი-15 ლარი</option>
+                                        <option value="tvPremSet">პრემიუმი+სეტანტა-20 ლარი</option>
+                                </select>
+                                </li>
+                                <button id="submit" class="button3">შეკვეთა</button>
+                            </li>
+                            </ul>
+                    </form>
+                </div>
+                <div class="item hide">
+                    <form id="myForm9">
+                        <ul class="paksia">
+                        <input id="dataInput" type="hidden" value="ukabelo"/>
+                        <li id="dataInput1" class="paksia-satauri">ვიპ</li>
+                        <li class="siisElementebi">100 ლარი</li>
+                        <li>სიჩქარე: 100 მბ/წმ</li>
+                        <li> მინიმალური 20 მბ</li>
+
+   
+                        <li> დაყოვნება &lt;400 მწმ, ჯიტერი &lt;50 </li>
+                        <li> დაკარგული პაკეტების კოეფიციენტი &lt;3% </li>   
+                        <li class="siisElementebi">
+                            <li>
+                                <select class="tvPak">
+                                    <option>აირჩიეთ ტელევიზიის პაკეტი</option>
+                                    <option value="tvEko">ეკონომი-10 ლარი</option>
+                                    <option value="tvEcoSet">ეკონომი+სეტანტა-15 ლარი</option>
+                                    <option value="tvBas">საბაზო-12 ლარი</option>
+                                    <option value="tvBasSet">საბაზო+სეტანტა-17 ლარი</option>
+                                    <option value="tvPrem">პრემიუმი-15 ლარი</option>
+                                    <option value="tvPremSet">პრემიუმი+სეტანტა-20 ლარი</option>
+                            </select>
+                            </li>
+                            <button id="submit" class="button3">შეკვეთა</button>
+                        </li>
+                        </ul>
+                </form>
+                </div>
+               
+                
+                    <button id="showMoreop" class="btn item"><span>მეტი</span><img width="30%" src="more.svg"></button>
+                    <button id="showLessop" class="btn hide"><span>ნაკლები</span><img width="30%" src="less.svg"></button>
+                
+            </div>
+        </div>
+    <script>
+       document.getElementById('showMore').addEventListener('click', function() {
+    const hiddenItems = document.querySelectorAll('.item.hide');
+    hiddenItems.forEach(function(item) {
+        item.classList.remove('hide');
+    });
+    document.getElementById('showMore').classList.add('hide');
+    document.getElementById('showMore').style.fontSize = "8pt";
+    document.getElementById('showLess').classList.remove('hide');
+    
+});
+
+document.getElementById('showLess').addEventListener('click', function() {
+    const visibleItems = document.querySelectorAll('.item:not(.hide)');
+    for (let i = 3; i < visibleItems.length; i++) {
+        visibleItems[i].classList.add('hide');
+        window.location.href = 'tindex.html';
+    }
+    document.getElementById('showMore').classList.remove('hide');
+    
+   
+    document.getElementById('showLess').classList.add('hide');
+    document.getElementById('showLess').style.fontSize = "8pt";
+});
+    </script>
+     <script>
+        document.getElementById('showMoreop').addEventListener('click', function() {
+     const hiddenItems = document.querySelectorAll('.item.hide');
+     hiddenItems.forEach(function(item) {
+         item.classList.remove('hide');
+     });
+     document.getElementById('showMoreop').classList.add('hide');
+     document.getElementById('showMoreop').style.fontSize = "8pt";
+     document.getElementById('showLessop').classList.remove('hide');
+     
+ });
+ 
+ document.getElementById('showLessop').addEventListener('click', function() {
+     const visibleItems = document.querySelectorAll('.item:not(.hide)');
+     for (let i = 3; i < visibleItems.length; i++) {
+         visibleItems[i].classList.add('hide');
+         window.location.href = 'tindex.html';
+     }
+     document.getElementById('showMoreop').classList.remove('hide');
+     
+    
+     document.getElementById('showLessop').classList.add('hide');
+     document.getElementById('showLessop').style.fontSize = "8pt";
+ });
+     </script>
+    <script>
+        document.querySelectorAll('form').forEach(function(form, index) {
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent the default form submission
+                const dataInput = form.querySelector('input[type="hidden"]').value;
+                const dataInput1 = form.querySelector('.paksia-satauri').innerText;
+                const dataInput2 = form.querySelector('.tvPak').value;
+
+                const url = `index.html#data${index + 1}=${encodeURIComponent(dataInput)}&data${index + 1}1=${encodeURIComponent(dataInput1)}+&data${index + 1}2=${encodeURIComponent(dataInput2)}`;
+                window.location.href = url; // Redirect to the index page with data in the URL
+            });
+        });
+    </script>
+</body>
+</html>
